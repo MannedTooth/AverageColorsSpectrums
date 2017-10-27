@@ -24,5 +24,12 @@ namespace AverageColorsSpectrums
         {
             InitializeComponent();
         }
+
+        private void button_addSpectrum_Click(object sender, RoutedEventArgs e)
+        {
+
+            EditSpectrumWindow esw = new EditSpectrumWindow();
+            esw.ShowDialog();
+        }
     }
 }

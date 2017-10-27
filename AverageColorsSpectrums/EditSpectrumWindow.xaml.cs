@@ -23,5 +23,15 @@ namespace AverageColorsSpectrums
         {
             InitializeComponent();
         }
+
+        private void button_selectFiles_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+            dlg.DefaultExt = ".png";
+            dlg.Filter = "Image Files(*.BMP;*.GIF;*.JPG;*.PNG)|*.BMP;*.GIF;*.JPG;*.PNG";
+
+            dlg.ShowDialog();
+        }
     }
 }

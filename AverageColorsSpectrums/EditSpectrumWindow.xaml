@@ -9,9 +9,9 @@
     <Grid>
         <Label x:Name="label" Content="Spectrum name :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="114,14,0,0" TextWrapping="Wrap" Text="Spectrum" VerticalAlignment="Top" Width="170"/>
-        <Button x:Name="button_selectFiles" Content="Choose file(s)..." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="button_selectFiles" Content="Choose file(s)..." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="99" Click="button_selectFiles_Click"/>
         <Label x:Name="label_numberFilesSelected" Content="0 file(s) selected" HorizontalAlignment="Left" Margin="114,38,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_confirm" Content="Confirm" HorizontalAlignment="Left" Margin="70,69,0,0" VerticalAlignment="Top" Width="76" Click="button_Click"/>
+        <Button x:Name="button_confirm" Content="Confirm" HorizontalAlignment="Left" Margin="70,69,0,0" VerticalAlignment="Top" Width="76"/>
         <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="150,69,0,0" VerticalAlignment="Top" Width="76"/>
 
     </Grid>
