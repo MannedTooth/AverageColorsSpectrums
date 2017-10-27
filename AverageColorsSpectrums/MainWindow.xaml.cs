@@ -29,7 +29,20 @@ namespace AverageColorsSpectrums
         {
 
             EditSpectrumWindow esw = new EditSpectrumWindow();
-            esw.ShowDialog();
+            if (esw.ShowDialog() == true)
+            {
+                label1.Content = esw.textBox_spectrumName.Text;
+                System.Console.WriteLine("closed");
+            }
+            else
+            {
+                System.Console.WriteLine("nope");
+            }
+        }
+
+        private void button_editSectrum_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

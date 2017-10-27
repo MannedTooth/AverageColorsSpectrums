@@ -10,13 +10,13 @@
         <ListView x:Name="listView_spectrumList" HorizontalAlignment="Left" Height="276" Margin="10,10,0,0" VerticalAlignment="Top" Width="235">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Spectrum name"/>
-                    <GridViewColumn Header="Number of images"/>
+                    <GridViewColumn Header="Spectrum name" DisplayMemberBinding="{Binding Path=name}"/>
+                    <GridViewColumn Header="Number of images" DisplayMemberBinding="{Binding Path=numberOfFiles}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button x:Name="button_addSpectrum" Content="Add" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" Width="75" Click="button_addSpectrum_Click"/>
-        <Button x:Name="button_editSectrum" Content="Edit" HorizontalAlignment="Left" Margin="90,291,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_editSectrum" Content="Edit" HorizontalAlignment="Left" Margin="90,291,0,0" VerticalAlignment="Top" Width="75" Click="button_editSectrum_Click"/>
         <Button x:Name="button_removeSpectrum" Content="Remove" HorizontalAlignment="Left" Margin="170,291,0,0" VerticalAlignment="Top" Width="75"/>
         <GroupBox x:Name="groupBox" Header="Options" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Height="276" Width="259">
             <Grid HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="249" Margin="0,0,-2,-12">
