@@ -1,0 +1,18 @@
+﻿<Window x:Class="AverageColorsSpectrums.EditSpectrumWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AverageColorsSpectrums"
+        mc:Ignorable="d"
+        Title="Add a new spectrum" Height="130.5" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="label" Content="Spectrum name :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="114,14,0,0" TextWrapping="Wrap" Text="Spectrum" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="button_selectFiles" Content="Choose file(s)..." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="label_numberFilesSelected" Content="0 file(s) selected" HorizontalAlignment="Left" Margin="114,38,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_confirm" Content="Confirm" HorizontalAlignment="Left" Margin="70,69,0,0" VerticalAlignment="Top" Width="76" Click="button_Click"/>
+        <Button x:Name="button_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="150,69,0,0" VerticalAlignment="Top" Width="76"/>
+
+    </Grid>
+</Window>
