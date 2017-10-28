@@ -27,16 +27,14 @@ namespace AverageColorsSpectrums
 
         private void button_addSpectrum_Click(object sender, RoutedEventArgs e)
         {
-            EditSpectrumWindow esw = new EditSpectrumWindow();
-            if (esw.ShowDialog() == true)
-            {
-                label1.Content = esw.textBox_spectrumName.Text;
-            }
+            EditSpectrumWindow esw = new EditSpectrumWindow("add");
+            esw.ShowDialog();
         }
 
         private void button_editSectrum_Click(object sender, RoutedEventArgs e)
         {
-            
+            EditSpectrumWindow esw = new EditSpectrumWindow("edit");
+            esw.ShowDialog();
         }
     }
 }

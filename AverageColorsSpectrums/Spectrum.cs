@@ -12,6 +12,11 @@ namespace AverageColorsSpectrums
         public String[] fileNames { get; set; }
         public int numberOfFiles { get; set; }
 
+        public Spectrum()
+        {
+
+        }
+
         public Spectrum(string _name, String[] _fileNames)
         {
             name = _name;

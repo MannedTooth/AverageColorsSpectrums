@@ -19,11 +19,19 @@ namespace AverageColorsSpectrums
     /// </summary>
     public partial class EditSpectrumWindow : Window
     {
-        public string[] fileNames = new string[] { };
+        Spectrum spectrum = new Spectrum();
+        string mode;
 
-        public EditSpectrumWindow()
+        public EditSpectrumWindow(string _mode)
         {
             InitializeComponent();
+            mode = _mode;
+            if (mode == "edit")
+            {
+                spectrum = (Spectrum)((MainWindow)Application.Current.MainWindow).listView_spectrumList.SelectedItem;
+                label_numberFilesSelected.Content = spectrum.fileNames.Count().ToString() + " file(s) selected";
+                textBox_spectrumName.Text = spectrum.name;
+            }
         }
 
         private void button_selectFiles_Click(object sender, RoutedEventArgs e)
@@ -36,8 +44,8 @@ namespace AverageColorsSpectrums
 
             if (dlg.ShowDialog() == true)
             {
-                fileNames = dlg.FileNames;
-                label_numberFilesSelected.Content = fileNames.Count().ToString() + " file(s) selected";
+                spectrum.fileNames = dlg.FileNames;
+                label_numberFilesSelected.Content = spectrum.fileNames.Count().ToString() + " file(s) selected";
             }
         }
 
@@ -49,7 +57,17 @@ namespace AverageColorsSpectrums
             }
             else
             {
-                ((MainWindow)Application.Current.MainWindow).listView_spectrumList.Items.Add(new Spectrum(textBox_spectrumName.Text, fileNames));
+                spectrum.name = textBox_spectrumName.Text;
+                spectrum.numberOfFiles = spectrum.fileNames.Count();
+                if (mode == "add")
+                {
+                    ((MainWindow)Application.Current.MainWindow).listView_spectrumList.Items.Add(spectrum);
+                }
+                else if (mode == "edit")
+                {
+                    ((MainWindow)Application.Current.MainWindow).listView_spectrumList.SelectedItem = spectrum;
+                    ((MainWindow)Application.Current.MainWindow).listView_spectrumList.Items.Refresh();
+                }
                 this.Close();
             }
         }
