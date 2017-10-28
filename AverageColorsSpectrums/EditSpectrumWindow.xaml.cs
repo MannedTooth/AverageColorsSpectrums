@@ -19,7 +19,7 @@ namespace AverageColorsSpectrums
     /// </summary>
     public partial class EditSpectrumWindow : Window
     {
-        public string[] fileNames;
+        public string[] fileNames = new string[] { };
 
         public EditSpectrumWindow()
         {
@@ -43,7 +43,19 @@ namespace AverageColorsSpectrums
 
         private void button_confirm_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).listView_spectrumList.Items.Add(new Spectrum(textBox_spectrumName.Text, fileNames));
+            if (textBox_spectrumName.Text == "")
+            {
+                System.Windows.MessageBox.Show("You must enter a name for this spectrum!");
+            }
+            else
+            {
+                ((MainWindow)Application.Current.MainWindow).listView_spectrumList.Items.Add(new Spectrum(textBox_spectrumName.Text, fileNames));
+                this.Close();
+            }
+        }
+
+        private void button_cancel_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }
