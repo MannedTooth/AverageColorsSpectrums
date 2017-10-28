@@ -8,13 +8,14 @@ namespace AverageColorsSpectrums
 {
     class Spectrum
     {
-        public String name { get; set; }
-        public String[] fileNames { get; set; }
+        public string name { get; set; }
+        public string[] fileNames { get; set; }
         public int numberOfFiles { get; set; }
 
         public Spectrum()
         {
-
+            fileNames = new String[0] { };
+            numberOfFiles = 0;
         }
 
         public Spectrum(string _name, String[] _fileNames)

@@ -55,6 +55,10 @@ namespace AverageColorsSpectrums
             {
                 System.Windows.MessageBox.Show("You must enter a name for this spectrum!");
             }
+            else if (spectrum.numberOfFiles <= 0)
+            {
+                System.Windows.MessageBox.Show("You must select at least one file!");
+            }
             else
             {
                 spectrum.name = textBox_spectrumName.Text;
