@@ -36,5 +36,10 @@ namespace AverageColorsSpectrums
             EditSpectrumWindow esw = new EditSpectrumWindow("edit");
             esw.ShowDialog();
         }
+
+        private void button_removeSpectrum_Click(object sender, RoutedEventArgs e)
+        {
+            listView_spectrumList.Items.RemoveAt(listView_spectrumList.SelectedIndex);
+        }
     }
 }
