@@ -41,5 +41,10 @@ namespace AverageColorsSpectrums
         {
             listView_spectrumList.Items.RemoveAt(listView_spectrumList.SelectedIndex);
         }
+
+        private void button_generateSpectrums_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
